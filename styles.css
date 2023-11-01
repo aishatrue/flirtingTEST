@@ -1,0 +1,29 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 1000px;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}
+
+.choices-button {
+  display: flex;
+  flex-direction: column;
+}
+
+.choices-button a div {
+  width: 400px;
+  height: 100px;
+  background-color: gray;
+  margin-top: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
