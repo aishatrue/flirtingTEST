@@ -2,16 +2,20 @@ const first = document.getElementById("first");
 const second = document.getElementById("second");
 
 function saveResult(event) {
-  event.preventDefault();
+  // event.preventDefault();
   const value = event.target.dataset.value;
+  console.log(value, "벨류학인");
   const currentVal = window.localStorage.getItem("first_option");
-  const valArray = [];
+  console.log(currentVal);
+  let valArray = [];
 
   if (currentVal) {
-    window.localStorage.setItem("first_option", valArray);
+    valArray = JSON.parse(currentVal);
+    valArray.push(value);
+    window.localStorage.setItem("first_option", JSON.stringify(valArray));
   } else {
     valArray.push(value);
-    window.localStorage.setItem("first_option", valArray);
+    window.localStorage.setItem("first_option", JSON.stringify(valArray));
   }
 }
 
